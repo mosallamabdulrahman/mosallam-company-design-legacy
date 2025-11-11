@@ -3876,6 +3876,9 @@ body {
     .max-1000\:items-start {
         align-items: flex-start;
     }
+    .max-1000\:mt-10 {
+        margin-top: 2.5rem /* 40px */;
+    }
 }
 
 @media (max-width: 1158px) {
