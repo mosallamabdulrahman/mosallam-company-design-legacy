@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--------------------- Favicon ---------------------->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!--------------------- Remix Icon ---------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <!--------------------- Swiper's CSS ---------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!--------------------- Font Awesome ---------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="dist/output.css" />
+    <title>mosalam</title>
+  </head>
+  <body>
+    <!--~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
+    <header
+      class="relative shadow-md bg-white block w-full z-10"
+      style="background-color: #ffffff; font-family: Arial, sans-serif"
+    >
+      <nav
+        class="container flex items-center w-[90%] bg-transparent mx-auto justify-between max-1000:p-5 p-5"
+      >
+        <!-- اللوجو -->
+        <div class="mr-5 mb-1">
+          <a
+            href="https://fictional-university.mosalam.com/"
+            class="flex items-center h-[50px]"
+          >
+            <img src="./imgs/logo.png" alt="logo_img" />
+          </a>
+        </div>
+        <ul class="main-navbar flex items-center max-1000:hidden mr-[35px]">
+          <li>
+            <a
+              class="bg-transparent leading-5 block py-[10px] md:py-[15px] px-[15px] relative max-1158px:text-[14px] font-normal max-1158px:whitespace-nowrap"
+              href="#about_us"
+              style="color: rgb(31, 31, 31); transition: color 0.3s ease-in-out"
+              onmouseover="this.style.color='#00aeef'"
+              onmouseout="this.style.color='#1f1f1f'"
+            >
+              ABOUT US
+            </a>
+          </li>
+          <li>
+            <a
+              class="bg-transparent leading-5 block py-[10px] md:py-[15px] px-[15px] relative max-1158px:text-[14px] font-normal max-1158px:whitespace-nowrap"
+              href="#testimonials"
+              style="color: rgb(31, 31, 31); transition: color 0.3s ease-in-out"
+              onmouseover="this.style.color='#00aeef'"
+              onmouseout="this.style.color='#1f1f1f'"
+            >
+              OUR CLIENTS
+            </a>
+          </li>
+          <li>
+            <a
+              class="bg-transparent leading-5 block py-[10px] md:py-[15px] px-[15px] relative max-1158px:text-[14px] font-normal max-1158px:whitespace-nowrap active"
+              href="#our_team"
+              style="color: rgb(31, 31, 31); transition: color 0.3s ease-in-out"
+              onmouseover="this.style.color='#00aeef'"
+              onmouseout="this.style.color='#1f1f1f'"
+            >
+              OUR TEAM
+            </a>
+          </li>
+          <li>
+            <a
+              class="bg-transparent leading-5 block py-[10px] md:py-[15px] px-[15px] relative max-1158px:text-[14px] font-normal max-1158px:whitespace-nowrap"
+              href="#contact_us"
+              style="color: rgb(31, 31, 31); transition: color 0.3s ease-in-out"
+              onmouseover="this.style.color='#00aeef'"
+              onmouseout="this.style.color='#1f1f1f'"
+            >
+              CONTACT US
+            </a>
+          </li>
+        </ul>
+
+        <!-- زر التوجل -->
+        <button
+          type="button"
+          onclick="toggleNavbar()"
+          class="toggle hidden max-1000:block duration-300 relative p-[9px_10px] mt-2 mb-2 rounded border-2 lg text-white border-transparent bg-silderColor hover:bg-mainColor hover:border-none mr-0"
+        >
+          <span
+            class="icon-bar block w-[22px] h-[2px] bg-white mb-[5px] rounded-[1px]"
+          ></span>
+          <span
+            class="icon-bar block w-[22px] h-[2px] bg-white mb-[5px] rounded-[1px]"
+          ></span>
+          <span
+            class="icon-bar block w-[22px] h-[2px] bg-white rounded-[1px]"
+          ></span>
+        </button>
+        <!-- القائمة -->
+        <ul
+          id="navbar-mobile"
+          class="duration-300 hidden max-[1000px]:container items-center max-[1000px]:hidden max-[1000px]:flex-col max-[1000px]:absolute max-[1000px]:top-[100%] max-[1000px]:left-0 max-[1000px]:w-full max-[1000px]:bg-white max-[1000px]:shadow-md max-[1000px]:py-4 max-[1000px]:gap-1"
+        >
+          <li>
+            <a
+              class="bg-transparent leading-5 block py-[10px] md:py-[15px] px-[15px] relative max-1158px:text-[14px] font-normal max-1158px:whitespace-nowrap active"
+              href="#bootstrap-touch-slider"
+              style="color: #00aeef; transition: color 0.3s ease-in-out"
+              onmouseover="this.style.color='#00aeef'"
+              onmouseout="this.style.color='#1f1f1f'"
+            >
+              SERVICES
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="bg-transparent leading-5 block py-[10px] md:py-[15px] px-[15px] relative max-1158px:text-[14px] font-normal max-1158px:whitespace-nowrap"
+              href="#about"
+              style="color: #1f1f1f; transition: color 0.3s ease-in-out"
+              onmouseover="this.style.color='#00aeef'"
+              onmouseout="this.style.color='#1f1f1f'"
+            >
+              ABOUT US
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="bg-transparent leading-5 block py-[10px] md:py-[15px] px-[15px] relative max-1158px:text-[14px] font-normal max-1158px:whitespace-nowrap"
+              href="#testimonials"
+              style="color: #1f1f1f; transition: color 0.3s ease-in-out"
+              onmouseover="this.style.color='#00aeef'"
+              onmouseout="this.style.color='#1f1f1f'"
+            >
+              OUR CLIENTS
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="bg-transparent leading-5 block py-[10px] md:py-[15px] px-[15px] relative max-1158px:text-[14px] font-normal max-1158px:whitespace-nowrap"
+              href="#support"
+              style="color: #1f1f1f; transition: color 0.3s ease-in-out"
+              onmouseover="this.style.color='#00aeef'"
+              onmouseout="this.style.color='#1f1f1f'"
+            >
+              CONTACT US
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--~~~~~~~~~~~~~~ Slider ~~~~~~~~~~~~~~~-->
+    <div class="slider-section relative w-full h-[700px]">
+      <div class="swiper mySwiper h-full">
+        <div class="swiper-wrapper">
+          <!-- الشريحة الأولى -->
+          <div
+            class="swiper-slide bg-transparent relative flex items-center justify-center max-h-[100%] bg-cover bg-center w-full"
+            style="background-image: url('./imgs/slider/slider-01.jpg')"
+          >
+            <div
+              class="container text-white text-center z-10 !max-1200px:w-[90%]"
+            >
+              <h2
+                class="text-[68px] font-light text-silderColor block m-0 mb-[30px] relative leading-[1.1]"
+                data-swiper-parallax="-300"
+              >
+                Best
+                <span class="text-mainColor font-bold">Hosting</span> Company
+              </h2>
+              <p
+                class="font-light pb-[35px] text-[21px] leading-[38px] text-silderColor"
+                data-swiper-parallax="-200"
+              >
+                Experience unparalleled hosting reliability and speed with
+                Mosalam. Explore our hosting and email services to elevate your
+                online presence today.
+              </p>
+              <a
+                href="https://hosting.mosalam.com/index.php?rp=/store/packages"
+                target="_blank"
+                class="border-2 border-silderColor mt-6 inline-block py-4 px-[70px] bg-silderColor text-white font-semibold rounded-lg shadow-md transition duration-300 hover-glow"
+              >
+                View Plans
+              </a>
+            </div>
+          </div>
+
+          <!-- الشريحة الثانية -->
+          <div
+            class="swiper-slide relative bg-transparent flex items-center justify-center max-h-[100%] bg-cover bg-center w-full"
+            style="background-image: url('./imgs/slider/slider-02.jpg')"
+          >
+            <div class="container text-white text-center z-10">
+              <h2
+                class="text-[68px] font-light text-silderColor block m-0 mb-[30px] relative leading-[1.1]"
+                data-swiper-parallax="-300"
+              >
+                Best
+                <span class="text-mainColor font-bold">IT Support</span>
+                Solutions
+              </h2>
+              <p
+                class="font-light pb-[35px] text-[21px] leading-[38px] text-silderColor"
+                data-swiper-parallax="-200"
+              >
+                Get unparalleled technical support whenever you need it.
+              </p>
+              <a
+                href="https://hosting.mosalam.com/index.php?rp=/store/packages"
+                target="_blank"
+                class="border-2 border-silderColor mt-6 inline-block py-4 px-[70px] bg-silderColor text-white font-semibold rounded-lg shadow-md transition duration-300 hover-glow"
+              >
+                View Plans
+              </a>
+            </div>
+          </div>
+
+          <!-- الشريحة الثالثة -->
+          <div
+            class="swiper-slide relative bg-transparent flex items-center justify-center max-h-[100%] bg-cover bg-center w-full"
+            style="background-image: url('./imgs/slider/slider-03.jpg')"
+          >
+            <div class="container text-white text-center z-10">
+              <h2
+                class="text-[68px] font-light text-silderColor block m-0 mb-[30px] relative leading-[1.1]"
+                data-swiper-parallax="-300"
+              >
+                Find the right
+                <span class="text-mainColor font-bold">ERP SYSTEMS</span>
+              </h2>
+              <p
+                class="font-light pb-[35px] text-[21px] leading-[38px] text-silderColor hover:opacity-5"
+                data-swiper-parallax="-200"
+              >
+                Unlock the power of seamless business operations.
+              </p>
+              <a
+                href="https://hosting.mosalam.com/index.php?rp=/store/packages"
+                target="_blank"
+                class="border-2 border-silderColor mt-6 inline-block py-4 px-[70px] bg-silderColor text-white font-semibold rounded-lg shadow-md transition duration-300 hover-glow"
+              >
+                View Plans
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="swiper-button-next text-white text-[14px] mr-5"></div>
+        <div class="swiper-button-prev text-white text-[14px] ml-5"></div>
+
+        <!-- النقاط -->
+        <div class="swiper-pagination mt-8"></div>
+      </div>
+    </div>
+
+    <!--~~~~~~~~~~~~~~ About Us ~~~~~~~~~~~~~~~-->
+    <section
+      id="about_us"
+      class="w-full bg-white !relative font-ptSans py-16 px-6"
+    >
+      <div class="container mx-auto text-center">
+        <h3
+          class="font-medium text-gray-800 text-[42px] mb-[25px] leading-[120%]"
+        >
+          About
+        </h3>
+        <p class="text-textGray mt-2 leading-[33px] font-normal">
+          A worldwide pioneer in cutting-edge digital solutions for the next
+          generations.
+        </p>
+
+        <div
+          class="mt-10 flex items-center justify-center gap-10 max-992px:block"
+        >
+          <div class="w-1/2 text-left max-[1000px]:w-full max-992px:w-full">
+            <h4 class="mb-[5px] font-semibold tracking-wider text-textGray">
+              UNIQUE WEB HOSTING EXPERIENCE
+            </h4>
+            <h2
+              class="text-[38px] font-light pb-2 mb-0 mt-0 leading-[62px] text-almostBlack"
+            >
+              Reliable support center
+            </h2>
+            <p
+              class="text-pGray text-[19px] italic pb-0 mb-5 leading-[30px] font-light"
+            >
+              Since our establishment, Mosalam has been dedicated to providing
+              high-quality services that are accessible globally. We focus on
+              ensuring the stability of our data centers, implementing rigorous
+              internal processes, and providing exceptional customer support.
+            </p>
+          </div>
+          <div class="w-1/2 max-[1000px]:w-full max-992px:w-full">
+            <img
+              src="imgs/about_02.jpg"
+              alt="Servers"
+              class="w-full rounded-md block max-full h-auto border-0"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--~~~~~~~~~~~~~~ TestiMonials ~~~~~~~~~~~~~~~-->
+    <section id="testimonials" class="bg-[#F5F5F5] text-center py-16">
+      <div class="container grid gap-6 mx-auto">
+        <h1 class="text-[#111827] text-[36px] font-bold leading-[52px]">
+          Some Of Our Valuable Clients
+        </h1>
+        <div class="grid gap-8 mx-auto p-4 relative">
+          <!-- First Swiper (عرض أصغر) -->
+          <div class="clients first-swiper relative mx-auto">
+            <div
+              class="swiper-container first-swiper-container swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden"
+            >
+              <div
+                class="swiper-wrapper ease-linear !w-[81%]"
+                id="swiper-wrapper-153bd99977336a110"
+                aria-live="off"
+                style="
+                  cursor: grab;
+                  transition-duration: 4000ms;
+                  transform: translate3d(-504.667px, 0px, 0px);
+                "
+              >
+                <div
+                  class="swiper-slide"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="7 / 8"
+                  data-swiper-slide-index="6"
+                >
+                  <a href="https://ozira.shop/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/logoOzira.png"
+                          alt="Ozira logo"
+                          loading="lazy"
+                          class=""
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide swiper-slide-prev"
+                  role="group"
+                  aria-label="8 / 8"
+                  data-swiper-slide-index="7"
+                  style="width: 242.333px; margin-right: 10px"
+                >
+                  <a href="https://a3elank.com/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/aelank.png"
+                          alt="Aelank logo"
+                          loading="lazy"
+                          class=""
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide swiper-slide-active"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="1 / 8"
+                  data-swiper-slide-index="0"
+                >
+                  <a href="http://wings15676.com/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/wings.png"
+                          alt="Wings logo"
+                          loading="lazy"
+                          class=""
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide swiper-slide-next"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="2 / 8"
+                  data-swiper-slide-index="1"
+                >
+                  <a href="https://almarinelogistic.com/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/TheLogo_5-removebg-preview-removebg-preview.png"
+                          alt="The Logo 5"
+                          loading="lazy"
+                          class=""
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="3 / 8"
+                  data-swiper-slide-index="2"
+                >
+                  <a href="https://honesty-eg.com/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/honestyhome.png"
+                          alt="Honesty Home logo"
+                          loading="lazy"
+                          class=""
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="4 / 8"
+                  data-swiper-slide-index="3"
+                >
+                  <a href="https://schoolgo.online/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/schoolgo.png"
+                          alt="SchoolGo logo"
+                          loading="lazy"
+                          class=""
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="5 / 8"
+                  data-swiper-slide-index="4"
+                >
+                  <a href="https://ahri.gov.eg/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/footerAR__3_-removebg-preview.png"
+                          alt="Footer AR logo"
+                          loading="lazy"
+                          class=""
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="6 / 8"
+                  data-swiper-slide-index="5"
+                >
+                  <a href="https://dr-fruits-vegetables.com/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/Fruits_and_Vegetables__3_-removebg-preview.png"
+                          alt="Fruits and Vegetables logo"
+                          loading="lazy"
+                          class=""
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <span
+                class="swiper-notification"
+                aria-live="assertive"
+                aria-atomic="true"
+              ></span>
+            </div>
+          </div>
+
+          <!-- Second Swiper (عرض أكبر) -->
+          <div class="clients second-swiper relative mx-auto">
+            <div
+              class="swiper-container second-swiper-container swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden"
+            >
+              <div
+                class="swiper-wrapper ease-linear !w-[89%]"
+                id="swiper-wrapper-f9c1073376e5675d9"
+                aria-live="off"
+                style="
+                  cursor: grab;
+                  transition-duration: 4000ms;
+                  transform: translate3d(-504.667px, 0px, 0px);
+                "
+              >
+                <div
+                  class="swiper-slide"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="7 / 8"
+                  data-swiper-slide-index="6"
+                >
+                  <a href="http://al-faleh.com/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center shadow-md duration-300 ease-in-out"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/alfaleh.png"
+                          alt="alfaleh logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide swiper-slide-prev"
+                  role="group"
+                  aria-label="8 / 8"
+                  data-swiper-slide-index="7"
+                  style="width: 242.333px; margin-right: 10px"
+                >
+                  <a href="https://yousifmansi.com/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center shadow-md duration-300 ease-in-out"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/youssef.png"
+                          alt="youssef logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide swiper-slide-active"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="1 / 8"
+                  data-swiper-slide-index="0"
+                >
+                  <a href="https://mazeedit.com/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center shadow-md duration-300 ease-in-out"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/revslider_logo-removebg-preview.png"
+                          alt="Mazzid logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide swiper-slide-next"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="2 / 8"
+                  data-swiper-slide-index="1"
+                >
+                  <a href="https://redimpexgroup.com/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center shadow-md duration-300 ease-in-out"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/quality-logo__1_-removebg-preview.png"
+                          alt="Quality logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="3 / 8"
+                  data-swiper-slide-index="2"
+                >
+                  <a href="https://datatech.click/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center shadow-md duration-300 ease-in-out"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/DataTech-removebg__2_-removebg-preview.png"
+                          alt="DataTech logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="4 / 8"
+                  data-swiper-slide-index="3"
+                >
+                  <a href="https://a-m-institution.eu/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center shadow-md duration-300 ease-in-out"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/fevicon-removebg-preview.png"
+                          alt="Fevicon logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="5 / 8"
+                  data-swiper-slide-index="4"
+                >
+                  <a href="https://looklikeled.com/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center shadow-md duration-300 ease-in-out"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/Looklikeled-removebg-preview.png"
+                          alt="Look Like LED logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="swiper-slide"
+                  style="width: 242.333px; margin-right: 10px"
+                  role="group"
+                  aria-label="6 / 8"
+                  data-swiper-slide-index="5"
+                >
+                  <a href="https://www.onefamilymor.com/" target="_blank">
+                    <div class="client-box">
+                      <div
+                        class="cleint bg-white box-shadow rounded p-4 border-t-[4px] border-solid border-gray-900 h-[9.375rem] flex items-center justify-center shadow-md duration-300 ease-in-out"
+                      >
+                        <img
+                          src="./imgs/logos-WithNoBackground/onefamily__1_-removebg-preview.png"
+                          alt="One Family logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <span
+                class="swiper-notification"
+                aria-live="assertive"
+                aria-atomic="true"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--~~~~~~~~~~~~~~ Our Team ~~~~~~~~~~~~~~~-->
+    <section id="our_team" class="py-16">
+      <h2 class="text-center text-black text-[3rem]">
+        Get to know our global team
+      </h2>
+      <p
+        class="text-center mb-[2em] mx-auto max-w-[600px] text-black text-[17px]"
+      >
+        We’re committed to building a diverse team and a work environment that’s
+        inclusive of people of all backgrounds. Get to know the wonderful team
+        who's building our product and supporting our customers.
+      </p>
+      <div class="container m-auto">
+        <div class="employees grid gap-4 md:gap-6 mx-auto">
+          <a href="https://www.linkedin.com/in/mahmoudmosalam" target="_blank"
+            ><div class="employee col-span-1">
+              <img
+                src="./imgs/OurTeam/MahmoudMosalam.jpg"
+                alt="Mahmoud Mosalam profile photo"
+                loading="lazy"
+                class="w-full h-[180px] rounded-xl object-cover"
+              />
+              <div class="mt-[10px]">
+                <h5 class="name-employe">Mahmoud Mosalam</h5>
+                <p class="jop-description">Infrastructure Engineer</p>
+                <p class="location">London, UK</p>
+              </div>
+            </div></a
+          >
+          <div class="employee col-span-1">
+            <img
+              src="./imgs/OurTeam/MostafaSamy.jpg"
+              alt="Mostafa Samy profile photo"
+              loading="lazy"
+              class="w-full h-[180px] rounded-xl object-cover"
+            />
+            <div class="mt-[10px]">
+              <h5 class="name-employe">Mostafa Samy</h5>
+              <p class="jop-description">Software Engineer</p>
+              <p class="location">Cairo, Egypt</p>
+            </div>
+          </div>
+          <a
+            href="https://www.linkedin.com/in/ahmed-maher-elattar"
+            target="_blank"
+            ><div class="employee col-span-1">
+              <img
+                src="./imgs/OurTeam/AhmedMaher.jpg"
+                alt="Ahmed Maher profile photo"
+                loading="lazy"
+                class="w-full h-[180px] rounded-xl object-cover"
+              />
+              <div class="mt-[10px]">
+                <h5 class="name-employe">Ahmed Maher</h5>
+                <p class="jop-description">DevOps Engineer</p>
+                <p class="location">Cairo, Egypt</p>
+              </div>
+            </div></a
+          ><a
+            href="https://www.linkedin.com/in/abdalaziz-mohamed-58a943248"
+            target="_blank"
+            ><div class="employee col-span-1">
+              <img
+                src="./imgs/OurTeam/AbdalazizMohammed.jpg"
+                alt="Abdalaziz Mohammed profile photo"
+                loading="lazy"
+                class="w-full h-[180px] rounded-xl object-cover"
+              />
+              <div class="mt-[10px]">
+                <h5 class="name-employe">Abdalaziz Mohammed</h5>
+                <p class="jop-description">
+                  Software Engineer - Front-end specialist
+                </p>
+                <p class="location">10th of Ramadan, Egypt</p>
+              </div>
+            </div></a
+          ><a
+            href="https://www.linkedin.com/in/mohamed-ali-farouk47"
+            target="_blank"
+            ><div class="employee col-span-1">
+              <img
+                src="./imgs/OurTeam/MohamedAli.jpg"
+                alt="Mohamed Ali profile photo"
+                loading="lazy"
+                class="w-full h-[180px] rounded-xl object-cover"
+              />
+              <div class="mt-[10px]">
+                <h5 class="name-employe">Mohamed Ali</h5>
+                <p class="jop-description">Executive Secretary</p>
+                <p class="location">Cairo, Egypt</p>
+              </div>
+            </div></a
+          ><a href="https://www.marketing-coaching.uk" target="_blank"
+            ><div class="employee col-span-1">
+              <img
+                src="./imgs/OurTeam/EslamRashadShaban.jpg"
+                alt="Eslam Rashad Shaban profile photo"
+                loading="lazy"
+                class="w-full h-[180px] rounded-xl object-cover"
+              />
+              <div class="mt-[10px]">
+                <h5 class="name-employe">Eslam Rashad Shaban</h5>
+                <p class="jop-description">Marketing Consultant</p>
+                <p class="location">Cairo, Egypt</p>
+              </div>
+            </div></a
+          ><a
+            href="www.linkedin.com/in/abdulrahman-rafat-998760316"
+            target="_blank"
+            ><div class="employee col-span-1">
+              <img
+                src="./imgs/OurTeam/AbdulrahmanRafat.jpg"
+                alt="Abdulrahman Rafat profile photo"
+                loading="lazy"
+                class="w-full h-[180px] rounded-xl object-cover"
+              />
+              <div class="mt-[10px]">
+                <h5 class="name-employe">Abdulrahman Rafat</h5>
+                <p class="jop-description">Front-End Developer</p>
+                <p class="location">Cairo, Egypt</p>
+              </div>
+            </div></a
+          ><a
+            href="https://www.linkedin.com/in/mahmoud-hashem-641433283"
+            target="_blank"
+            ><div class="employee col-span-1">
+              <img
+                src="./imgs/OurTeam/MohamedHashem.jpg"
+                alt="Mohamed Hashem profile photo"
+                loading="lazy"
+                class="w-full h-[180px] rounded-xl object-cover"
+              />
+              <div class="mt-[10px]">
+                <h5 class="name-employe">Mohamed Hashem</h5>
+                <p class="jop-description">System Administrator</p>
+                <p class="location">Giza, Egypt</p>
+              </div>
+            </div></a
+          >
+          <div class="employee col-span-1">
+            <img
+              src="./imgs/OurTeam/AhmedRafat.jpg"
+              alt="Ahmed Rafat profile photo"
+              loading="lazy"
+              class="w-full h-[180px] rounded-xl object-cover"
+            />
+            <div class="mt-[10px]">
+              <hh5 class="name-employe">Ahmed Rafat</hh5>
+              <p class="jop-description">IT Support</p>
+              <p class="location">Cairo, Egypt</p>
+            </div>
+          </div>
+          <a
+            href="https://www.linkedin.com/in/mohamed-elhamaky-s-b92a381a4/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app"
+            target="_blank"
+            ><div class="employee col-span-1">
+              <img
+                src="./imgs/OurTeam/MohamedElhamaky.jpg"
+                alt="Mohamed Elhamaky Samra profile photo"
+                loading="lazy"
+                class="w-full h-[180px] rounded-xl object-cover"
+              />
+              <div class="mt-[10px]">
+                <h5 class="name-employe">Mohamed Elhamaky Samra</h5>
+                <p class="jop-description">Infrastructure Engineer</p>
+                <p class="location">Dubai, United Arab Emirates</p>
+              </div>
+            </div></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!--~~~~~~~~~~~~~~ Contact Us ~~~~~~~~~~~~~~~-->
+    <section
+      id="contact_us"
+      class="w-full relative z-0 py-16"
+      style="background-color: #ffffff"
+    >
+      <!-- Combined Support and Contact Form Section -->
+      <section id="support" class="py-20">
+        <div
+          class="container mx-auto px-4"
+          style="font-family: Arial, sans-serif"
+        >
+          <div class="mb-[60px] block relative text-center">
+            <h3
+              class="text-[42px] font-light mb-[25px] leading-[120%] relative"
+              style="color: #1f1f1f"
+            >
+              Need Help? Sure we are Online!
+            </h3>
+            <p class="font-normal leading-[33px]" style="color: #999">
+              Let us give you more details about the special offer for your
+              business. Please fill out the form below. We have many business
+              owners who are happy working with us!
+            </p>
+          </div>
+          <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-12 items-stretch">
+              <!-- Form Column -->
+              <div class="w-full md:w-1/2">
+                <div
+                  class="bg-white rounded-2xl shadow-2xl p-8 h-full transform hover:scale-[1.01] transition duration-300"
+                >
+                  <h2 class="text-3xl font-bold mb-2" style="color: #1f1f1f">
+                    Let's Connect
+                  </h2>
+                  <p class="mb-8" style="color: #999">
+                    Tell us about your IT infrastructure needs
+                  </p>
+
+                  <form
+                    id="contactForm"
+                    class="space-y-6"
+                    action="https://fictional-university.mosalam.com/wp-admin/admin-post.php"
+                    method="POST"
+                  >
+                    <!-- تحديد اسم الإجراء -->
+                    <input
+                      type="hidden"
+                      name="action"
+                      value="handle_custom_contact_form"
+                    />
+
+                    <div class="relative">
+                      <label
+                        for="name"
+                        class="absolute -top-2.5 left-3 bg-white px-2 text-sm font-medium"
+                        >Full Name</label
+                      >
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="w-full px-4 py-3 rounded-xl border-2"
+                        required=""
+                      />
+                    </div>
+
+                    <div class="relative">
+                      <label
+                        for="email"
+                        class="absolute -top-2.5 left-3 bg-white px-2 text-sm font-medium"
+                        >Email Address</label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="w-full px-4 py-3 rounded-xl border-2"
+                        required=""
+                      />
+                    </div>
+
+                    <div class="relative">
+                      <label
+                        for="details"
+                        class="absolute -top-2.5 left-3 bg-white px-2 text-sm font-medium"
+                        >Project Details</label
+                      >
+                      <textarea
+                        id="details"
+                        name="details"
+                        rows="5"
+                        class="w-full px-4 py-3 rounded-xl border-2 resize-none"
+                        required=""
+                      ></textarea>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="w-full font-bold py-4 px-6 rounded-xl"
+                      style="background-color: #2563eb; color: #ffffff"
+                    >
+                      Get in touch
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Image Column -->
+              <div class="w-full md:w-1/2 hidden md:block">
+                <div
+                  class="bg-white rounded-2xl shadow-2xl p-8 h-full bg-cover bg-center"
+                  style="
+                    background-image: url('https://images.unsplash.com/photo-1560732488-6b0df240254a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80');
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!--~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+    <footer
+      class="max-1000:pt-14 py-16 max-1000:pb-0 text-textGray bg-almostBlack"
+    >
+      <div class="container mx-auto px-4">
+        <div
+          class="big-content-footer grid grid-cols-12 gap-4 max-1000:flex max-1000:flex-col max-1000:gap-[30px]"
+        >
+          <!-- العمود الأول -->
+          <div class="col-span-4 relative min-h-[1px] px-[15px]">
+            <div class="relative block mb-6">
+              <img src="/imgs/Logo-3.png" alt="Logo" />
+            </div>
+            <p class="mb-2">
+              Our company specializes in providing comprehensive web hosting
+              solutions, technical support outsourcing services, and
+              cutting-edge ERP systems. We strive to deliver unparalleled
+              expertise and support to businesses of all sizes, ensuring
+              seamless digital operations and enhanced efficiency.
+            </p>
+          </div>
+          <!-- العمود الثاني -->
+          <div class="col-span-3 relative min-h-[1px] px-[15px]">
+            <h3
+              class="text-white text-[21px] font-light mb-[30px] leading-[1] relative"
+            >
+              Quick Links
+            </h3>
+            <ul class="mb-[10px]">
+              <li
+                class="mb-[10px] pb-[10px] block w-full border-b border-dashed border-textGray border-custom-opacity"
+              >
+                <a
+                  href="#about_us"
+                  class="text-textGray hover:text-white transition duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li
+                class="mb-[10px] pb-[10px] block w-full border-b border-dashed border-textGray border-custom-opacity"
+              >
+                <a
+                  href="#testimonials"
+                  class="text-textGray hover:text-white transition duration-300"
+                  >Our Clients</a
+                >
+              </li>
+              <li
+                class="mb-[10px] pb-[10px] block w-full border-b border-dashed border-textGray border-custom-opacity"
+              >
+                <a
+                  href="#our_team"
+                  class="text-textGray hover:text-white transition duration-300"
+                  >OUR TEAM</a
+                >
+              </li>
+              <li
+                class="mb-[10px] pb-[10px] block w-full border-b border-dashed border-textGray border-custom-opacity"
+              >
+                <a
+                  href="#support"
+                  class="text-textGray hover:text-white transition duration-300"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- العمود الثالث -->
+          <div class="col-span-3 relative min-h-[1px] px-[15px]">
+            <h3
+              class="text-white text-[21px] font-light mb-[30px] leading-[1] relative"
+            >
+              Contact Us
+            </h3>
+            <li
+              class="mb-[10px] pb-[10px] block w-full border-b border-dashed border-textGray border-custom-opacity"
+            >
+              <a
+                href="#"
+                class="text-textGray hover:text-white transition duration-300"
+                >info@mosalam.com</a
+              >
+            </li>
+            <li
+              class="mb-[10px] pb-[10px] block w-full border-b border-dashed border-textGray text-textGray border-custom-opacity"
+            >
+              United Kingdome office
+              <br />
+              +447310082737
+            </li>
+            <li
+              class="mb-[10px] pb-[10px] block w-full border-b border-dashed border-textGray text-textGray border-custom-opacity"
+            >
+              egypt office
+              <br />
+              +201004954412
+            </li>
+          </div>
+          <!-- العمود الرابع -->
+          <div class="col-span-2 relative min-h-[1px] px-[15px]">
+            <div class="widget mb-8">
+              <div class="widget-title mb-4">
+                <h3
+                  class="text-[21px] font-light mb-[30px] leading-[1] relative"
+                  style="color: #ffffff"
+                >
+                  Social
+                </h3>
+              </div>
+              <ul class="mb-[10px] grid grid-cols-[55px_55px]">
+                <li class="mb-[10px] pb-[10px] w-1/2">
+                  <a
+                    href="https://www.facebook.com/MosalamCorp"
+                    target="_blank"
+                    class="block text-center"
+                    style="color: #3b5998"
+                    onmouseover="this.style.color='#ffffff'"
+                    onmouseout="this.style.color='#3b5998'"
+                  >
+                    <i class="fab fa-facebook text-xl"></i>
+                  </a>
+                </li>
+                <li class="mb-[10px] pb-[10px] w-1/2">
+                  <a
+                    href="https://eg.linkedin.com/company/mosalam"
+                    target="_blank"
+                    class="block text-center"
+                    style="color: #0077b5"
+                    onmouseover="this.style.color='#ffffff'"
+                    onmouseout="this.style.color='#0077B5'"
+                  >
+                    <i class="fab fa-linkedin text-xl"></i>
+                  </a>
+                </li>
+                <li class="mb-[10px] pb-[10px] w-1/2">
+                  <a
+                    href="https://t.me/mosalamhosting"
+                    target="_blank"
+                    class="block text-center"
+                    style="color: #0088cc"
+                    onmouseover="this.style.color='#ffffff'"
+                    onmouseout="this.style.color='#0088CC'"
+                  >
+                    <i class="fab fa-telegram text-xl"></i>
+                  </a>
+                </li>
+                <li class="mb-[10px] pb-[10px] w-1/2">
+                  <a
+                    href="https://wa.me/201004954412"
+                    target="_blank"
+                    class="block text-center"
+                    style="color: #25d366"
+                    onmouseover="this.style.color='#ffffff'"
+                    onmouseout="this.style.color='#25D366'"
+                  >
+                    <i class="fab fa-whatsapp text-xl"></i>
+                  </a>
+                </li>
+              </ul>
+              <!-- end links -->
+            </div>
+            <!-- end clearfix -->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--~~~~~~~~~~~~~~ CopyRight ~~~~~~~~~~~~~~~-->
+    <div
+      class="copyright border-t border-dashed border-opacity-10 border-custom-opacity bg-almostBlack box-border w-full max-1000:py-14 max-1000:px-7 p-[50px_60px] overflow-hidden"
+    >
+      <div
+        class="container mx-auto flex justify-between max-1000:flex-col max-1000:items-start items-center"
+      >
+        <div class="max-1000:w-full">
+          <p class="mb-[10px]">
+            © 2023
+            <span>mosalam.com</span>
+            . All right reserved
+          </p>
+        </div>
+        <div class="">
+          <form method="get" action="#">
+            <input
+              placeholder="Subscribe our newsletter.."
+              name="search"
+              class="outline-none block rounded-[3px] bg-newsTColor border-none text-[15px] font-normal text-textGray w-[400px] py-[18px] pr-[50px] pl-[18px]"
+            />
+            <i
+              class="fa fa-envelope-o w-[18px] h-[18px] absolute top-4 right-[18px] text-textGray mt-[6px]"
+            ></i>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--~~~~~~~~~~~~~~ Buttons ~~~~~~~~~~~~~~~-->
+    <a
+      href="#"
+      class="scroll-button hidden-scroll right-[55px] bg-buttonsColor z-[100] w-[50px] h-[50px] leading-[47px] fixed rounded-[3px] text-center text-[25px] text-white cursor-pointer duration-700 ease-ease-in-out-custom hover:bg-mainColor"
+    >
+      <i
+        class="fa fa-angle-up text-[30px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      ></i>
+    </a>
+    <!--~~~~~~~~~~~~~~ Swiper Js ~~~~~~~~~~~~~~~-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--~~~~~~~~~~~~~~ Main Js ~~~~~~~~~~~~~~~-->
+    <script src="./js/main.js"></script>
+    <script src="./js/silder.js"></script>
+    <script src="./js/clients.js"></script>
+  </body>
+</html>

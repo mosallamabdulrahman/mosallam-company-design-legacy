@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply scroll-smooth;
+}
+
+body {
+    @apply bg-bgLight font-ptSans text-textGray text-[15px] leading-custom overflow-x-hidden;
+}
+
+
+@media (max-width: 1000px) {
+    .main-navbar {
+        display: none; /* إخفاء القائمة على الشاشات الصغيرة */
+    }   
+
+    #navbar-mobile.show {
+        display: grid; /* إظهار القائمة عند إضافة الكلاس "show" */
+        position: absolute; /* وضع القائمة بشكل مطلق */
+        top: 100%; /* وضع القائمة أسفل الهيدر */
+        left: 0; /* محاذاة القائمة إلى اليسار */
+        width: 100%; /* جعل القائمة تأخذ العرض الكامل */
+        background-color: white; /* خلفية بيضاء */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+        padding: 1rem 0; /* إضافة padding */
+        max-width: 100%;
+        padding-left: 4.5rem;
+        padding-right: 4.5rem;
+        box-shadow: none;
+        padding-top: 0;
+    }
+    #navbar-mobile.show li select {
+        margin-right: 20px;
+    }
+}
+

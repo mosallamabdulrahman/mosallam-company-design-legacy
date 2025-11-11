@@ -1,0 +1,26 @@
+{
+  "name": "planet-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss build src/input.css -o dist/output.css",
+    "start": "npm run build:css && live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "A website project using Tailwind CSS",
+  "devDependencies": {
+    "postcss-cli": "^11.0.0",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "live-server": "^1.2.1",
+    "postcss": "^8.5.1",
+    "swiper": "^11.2.2",
+    "tailwindcss": "^3.3.3"
+  }
+}
